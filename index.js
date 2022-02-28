@@ -1,7 +1,7 @@
 "use strict";
 
 //global variabel 
-//En array med olika snittblommor 
+//An array with flower object 
 let webbside = [
     {
         id: 1,

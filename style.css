@@ -1,5 +1,5 @@
 body{
-    margin: 0px;
+    margin: 0px auto;
     max-width: 800px;
     font-family: 'Courier New', Courier, monospace;
     
@@ -18,7 +18,7 @@ h1{
 
 #add-flowers{
     display: grid;
-    grid-template-columns: 1fr 1fr 100px 80px;
+    grid-template-columns: 1fr 1fr 80px 80px 40px;
     gap: 10px;
     margin-bottom: 15px;
     padding-bottom: 15px;
@@ -27,30 +27,29 @@ h1{
 
 #filters{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 60px;
+    margin-bottom: 15px;
+}
+ 
+
+#show-all{
+    font-size: 12px;
 }
 
-#filter-by-name,
-#filter-by-price,
-#filter-by-color,
-#filter-by-season{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-}
 
 #head {
     display: grid;
     grid-template-columns: repeat(5,1fr);
 
-    background-color: lightpink;
+    background-color: rgb(241, 193, 200);
     padding: 10px 20px;
     border-bottom: 1px solid rgb(0, 0, 0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #flowers{
-    background: lightpink;
+    background:rgb(241, 193, 200);
     padding: 10px;
 }
 
