@@ -1,4 +1,6 @@
 body{
+    margin: 0px;
+    max-width: 800px;
     font-family: 'Courier New', Courier, monospace;
     
 }
@@ -13,3 +15,43 @@ h1{
     text-align: center;
     color: rgb(197, 134, 199);
 }
+
+#add-flowers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 100px 80px;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+#filters{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+#filter-by-name,
+#filter-by-price,
+#filter-by-color,
+#filter-by-season{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+#head {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+
+    background-color: lightpink;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+#flowers{
+    background: lightpink;
+    padding: 10px;
+}
+
+
