@@ -9,8 +9,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hej</h1>
-    <p>jag heter olivia</p>
+    <h1>FlowerPower</h1>
+    <form id="add-flowers">
+        <input id="name" type="text" placeholder="Name">
+        <input id="price" type="number" placeholder="Price">
+        <input id="color" type="text" placeholder="Color">
+        <input id="season" type="text" placeholder="Season">
+        <button>Add</button>
+    </form>
+
+    <div id="filters">
+
+        <form id="filter-by-name">
+            <input id="filter-name" type="text" placeholder="Filter by name">
+            <button>Filter</button>
+        </form>
+
+       <form id="filter-by-price">
+            <input id="filter-price" type="text" placeholder="Filter by price">
+            <button>Filter</button>
+        </form>
+
+        <form id="filter-by-color">
+            <input id="filter-color" type="text" placeholder="Filter by color">
+            <button>Filter</button>
+        </form>
+
+        <form id="filter-by-Season">
+            <input id="filter-season" type="text" placeholder="Filter by season">
+            <button>Filter</button>
+        </form>
+
+        <button id="show-all" type="button">Show all</button>
+    </div>
+
+    <div id="head">
+        <div>Name</div>
+        <div>Price</div>
+        <div>Color</div>
+        <div>Season</div>
+        <div>Actions</div>
+    </div>
+
+    <div id="flowers"></div>
+
     <script src="database.js"></script>
     <script src="main.js"></script>
 </body>
