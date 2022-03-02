@@ -82,7 +82,7 @@ function renderFlower(flower) {
     div.id = flower.id;
 
     div.innerHTML = `
-        <div>${flower.name}</div>
+        <li>${flower.name}</li>
         <div>${flower.price}</div>
         <div>${flower.color}</div>
         <div>${flower.season}</div>
@@ -113,6 +113,20 @@ function onAddFlowerSubmit(event) {
     let price = Number(document.getElementById("price").value);
     let color = document.getElementById("color").value;
     let season = document.getElementById("season").value;
+
+// Added alerts to the function
+    if(name == ""){
+        return alert("Fill in all the information please.");
+    }
+    else if(price == ""){
+        return alert("Fill in all the information please.");
+    }
+    else if(color == ""){
+        return alert("Fill in all the information please.");
+    }
+    else if(season == ""){
+        return alert("Fill in all the information please.");
+    }
 
     let flower = createNewFlower(name, price, color, season);
     flower.id = database[database.length - 1].id + 1;
@@ -191,3 +205,5 @@ function setFilterFlowerHandlers() {
 renderFlowers(database);
 setAddFlowerHandler();
 setFilterFlowerHandlers();
+
+

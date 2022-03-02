@@ -41,5 +41,33 @@ let database = [
         price: 35,
         color: "Röd",
         season: "Sommar"
+    },
+    {
+        id: 7,
+        name: "Pion",
+        price: 50,
+        color: "Rosa",
+        season: "Sommar"
+    },
+    {
+        id: 8,
+        name: "Hyacint",
+        price: 40,
+        color: "Vit",
+        season: "Vinter"
+    },
+    {
+        id: 9,
+        name: "Anemon",
+        price: 25,
+        color: "Lila",
+        season: "Vår"
+    },
+    {
+        id: 10,
+        name: "Nejlika",
+        price: 35,
+        color: "Orange",
+        season: "Sommar"
     }
 ];
