@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlowerPower</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>FlowerPower</h1>
-    <form id="add-flowers">
+    <h1>Flower database</h1>
+
+    <form id="add-flower-form">
         <input id="name" type="text" placeholder="Name">
         <input id="price" type="number" placeholder="Price">
         <input id="color" type="text" placeholder="Color">
-        <input id="season" type="text" placeholder="Season">
+        <input id="Season" type="text" placeholder="Season">
         <button>Add</button>
     </form>
 
     <div id="filters">
 
-       <form id="filter-by-price">
-            <input id="filter-price" type="text" placeholder="Filter by price">
+        <form id="filter-by-price">
+            <input id="filter-price" type="number" placeholder="Filter by price">
             <button>Filter</button>
         </form>
 
@@ -38,7 +40,7 @@
         <button id="show-all" type="button">Show all</button>
     </div>
 
-    <div id="head">
+    <div id="headers">
         <div>Name</div>
         <div>Price</div>
         <div>Color</div>
@@ -51,4 +53,5 @@
     <script src="index.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>

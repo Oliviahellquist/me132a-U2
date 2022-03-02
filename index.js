@@ -1,49 +1,45 @@
-"use strict";
-
-//global variabel 
-//An array with flower object 
-let webbside = [
+// Our database of dogs
+let database = [
     {
         id: 1,
-        name: "Ranukel",
+        name: "Dhalia",
         price: 60,
         color: "Rosa",
-        season: "Vår"
-
+        season: "Höst"
     },
     {
         id: 2,
-        name: "Pion",
-        price: 40,
-        color: "Vit",
-        season: "Sommar"
+        name: "Ranukel",
+        price: 65,
+        color: "Orange",
+        season: "Vår"
     },
     {
         id: 3,
-        name: "Dahalia",
-        price: 60,
-        color: "Orange",
-        season: "Höst"
+        name: "Tulpan",
+        price: 25,
+        color: "Lila",
+        season: "Vår"
     },
     {
         id: 4,
         name: "Amaryllis",
         price: 70,
-        color: "Röd",
+        color: "Vit",
         season: "Vinter"
     },
     {
         id: 5,
-        name: "Tulpan",
-        price: 35,
+        name: "Solros",
+        price: 60,
         color: "Gul",
         season: "Vår"
     },
     {
         id: 6,
-        name: "Anemon",
+        name: "Ros",
         price: 35,
-        color: "Lila",
-        season: "Vår"
+        color: "Röd",
+        season: "Sommar"
     }
 ];
