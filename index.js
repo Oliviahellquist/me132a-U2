@@ -1,4 +1,6 @@
-// Our database of dogs
+"use strict";
+
+// Our database of flowers
 let database = [
     {
         id: 1,
@@ -70,4 +72,4 @@ let database = [
         color: "Orange",
         season: "Sommar"
     }
-];
+]

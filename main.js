@@ -1,7 +1,5 @@
 "use strict";
 
-// functions in alphabetical order
-
 
 // Creates a flower
 function createNewFlower(name, price, color, season) {
@@ -15,10 +13,12 @@ function createNewFlower(name, price, color, season) {
     return flower;
 }
 
+
 // Adds a flower
 function addFlowerToDatabase(database, flower) {
     database.push(flower);
 }
+
 
 function removeFlowerById(flowers, id) {
     for (let i = 0; i < flowers.length; i++) {
@@ -30,6 +30,7 @@ function removeFlowerById(flowers, id) {
     }
 }
 
+//filters flowers using its color
 function getFlowersByColor(flowers, color) {
     let flowersByColor = [];
 
@@ -42,6 +43,7 @@ function getFlowersByColor(flowers, color) {
     return flowersByColor;
 }
 
+//filters flowers using its season
 function getFlowersBySeason(flowers, season) {
     let flowersBySeason = [];
 
@@ -54,6 +56,7 @@ function getFlowersBySeason(flowers, season) {
     return flowersBySeason;
 }
 
+//filters flowers using its price
 function getFlowersByPrice(flowers, price) {
     let flowersByPrice = [];
 
@@ -65,17 +68,8 @@ function getFlowersByPrice(flowers, price) {
 
     return flowersByPrice;
 }
-
-function getAverageFlowerPrice(flowers) {
-    let sumOfPrice = 0;
-
-    for (let flower of flowers) {
-        sumOfPrice = sumOfPrice + flower.price;
-    }
-
-    return Math.round(sumOfPrice / flowers.length);
-}
-
+//creates an html element
+//creates a list with <li></li>
 function renderFlower(flower) {
     let div = document.createElement("div");
     div.classList.add("flower");
@@ -106,13 +100,14 @@ function renderFlowers(flowers) {
 
 
 function onAddFlowerSubmit(event) {
-   
     event.preventDefault();
 
     let name = document.getElementById("name").value;
-    let price = Number(document.getElementById("price").value);
+    let price = document.getElementById("price").value;
     let color = document.getElementById("color").value;
     let season = document.getElementById("season").value;
+
+    let flower = createNewFlower(name, price, color, season);
 
 // Added alerts to the function
     if(name == ""){
@@ -128,21 +123,21 @@ function onAddFlowerSubmit(event) {
         return alert("Fill in all the information please.");
     }
 
-    let flower = createNewFlower(name, price, color, season);
+  
     flower.id = database[database.length - 1].id + 1;
 
     addFlowerToDatabase(database, flower)
     renderFlowers(database);
+
     let form = document.getElementById("add-flower-form");
     form.reset();
 }
 
 
-function setAddFlowerHandler() {
+function setAddFlowerHandler(){
     let form = document.getElementById("add-flower-form");
     form.addEventListener("submit", onAddFlowerSubmit);
 }
-
 
 function onRemoveFlowerClick(event) {
     let button = event.target;
@@ -174,14 +169,13 @@ function onFilterBySeasonSubmit(event) {
     renderFlowers(flowers);
 }
 
-
 function onFilterByPriceSubmit(event) {
     event.preventDefault();
     let price = document.getElementById("filter-price").value;
     let flowers = getFlowersByPrice(database, price);
     renderFlowers(flowers);
 }
-
+//a function that restores the website to its original
 function onShowAllClick() {
     document.getElementById("filter-color").value = "";
     document.getElementById("filter-season").value = "";
@@ -205,5 +199,6 @@ function setFilterFlowerHandlers() {
 renderFlowers(database);
 setAddFlowerHandler();
 setFilterFlowerHandlers();
+
 
 
