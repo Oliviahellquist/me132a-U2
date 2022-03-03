@@ -109,7 +109,7 @@ function onAddFlowerSubmit(event) {
 
     let flower = createNewFlower(name, price, color, season);
 
-// Added alerts to the function
+// Added alerts to the function user if they've missed an input field
     if(name == ""){
         return alert("Fill in all the information please.");
     }
@@ -142,8 +142,12 @@ function setAddFlowerHandler(){
 function onRemoveFlowerClick(event) {
     let button = event.target;
     let id = button.parentElement.id;
-    removeFlowerById(database, id);
-    renderFlowers(database);
+
+    // Add confirm
+    if(confirm(`Are you sure you want to remove the flower`)){
+        removeFlowerById(database, id);
+        renderFlowers(database); 
+    }
 }
 
 
